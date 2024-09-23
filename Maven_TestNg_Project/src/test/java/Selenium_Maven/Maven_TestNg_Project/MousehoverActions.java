@@ -16,6 +16,7 @@ public class MousehoverActions {
 		WebElement btn = driver.findElement(By.xpath("//span[contains(text(),'right click me']"));
 		Actions act = new Actions(driver);
 		act.click(btn).build().perform();
+		
 	}
 	@Test
 	public void verifyDoubleClick() {
@@ -25,6 +26,7 @@ public class MousehoverActions {
 		WebElement dc = driver.findElement(By.xpath("button[@ondblcick=\"myFunction()\"]"));
 		Actions act = new Actions(driver);
 		act.doubleClick(dc).build().perform();
+		
 	}
 	@Test
 	public void verifyDragAndDrop() {
@@ -36,6 +38,7 @@ public class MousehoverActions {
 		WebElement dest = driver.findElement(By.id("droppable"));
 		Actions act = new Actions(driver);
 		act.dragAndDrop(src, dest).build().perform();
+		
 	}
 	@Test
 	public void verifyMovetoElements() {
@@ -46,5 +49,6 @@ public class MousehoverActions {
 		WebElement thirdlink = driver.findElement(By.xpath("//span[contains(text(),'selenium oneByAron']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(thirdlink).click().build().perform();
+		
 	}
 }
